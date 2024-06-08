@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATION </title>
+    <style>
+
+        body { 
+            width: 100%;
+            height:auto;
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+            font-size: 18px;
+        
+            letter-spacing:1.2px;
+            background-image: url("../static/about.jpg");
+            background-size: cover;	
+        }
+        #form-div{
+                border-width: 0.2rem !important;
+                border-radius: 2% !important;
+                box-shadow: rgb(187, 183, 183) 3px 7px ; 
+                background-image:url("../static/heart.jpeg");
+                background-size: cover;
+                background:rgba(0, 0, 0, 0.685);
+        
+            }
+        #form-div:hover{
+            box-shadow: rgb(43, 39, 39) 5px 10px !important;
+        }
+        input,select{
+                outline: none !important;
+                border: none !important;
+                border-bottom:rgba(214, 15, 1, 0.553) 2px solid !important;
+            }
+        input:focus,input:active{
+                outline: none !important;
+                border: none !important;
+            }
+        input::placeholder,select::placeholder{ 
+          color: black !important;
+          opacity: 1;
+        }
+        h1{
+            color: orange !important;
+            text-align: center;
+            align-items: center;
+            display: block;
+            }
+        footer{
+            background: rgb(113, 107, 107) !important;
+            color: rgb(0, 0, 0) !important;
+            font-weight: bold !important;
+            text-align: center !important;
+            }
+        nav{
+            background: rgb(87, 87, 87) !important;
+            box-shadow: rgba(0, 0, 0, 0.582) 2px 8px;
+            color: white;
+            align-items: flex-start;
+            justify-content: space-between;
+            display: flex;
+            }
+    
+        .navbar-brand{
+                font-family: 'Berkshire Swash', cursive;
+            }
+        .form-group{
+                border: none !important;
+                outline: none !important;
+            }
+        .form-control:focus,select:focus,select:active{
+                box-shadow: gray 1px 3px !important;
+            }
+        select option { color: black; }
+        select option:first-child{
+          color: black;
+        }
+        #mobileview{
+            display: none;
+        }
+        #counter{
+            position: absolute;
+            right: 2%;
+            top: 11%;
+            z-index: 9999;
+            height: 50px;
+            min-width: 50px;
+            background-color: rgba(0, 128, 128, 0.397);
+            color: orange;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            font-size: large;
+        
+        }
+        
+        @media (max-width:767px) {
+            #mobileview{
+            display: block !important;
+        }
+        }
+        p{
+            color: black;
+        }
+            
+        </style>
+</head>
+<body>
+    <nav class=" text-center navbar navbar-expand-md mb-3 " style="display: flex; justify-content: space-between; color: black;">
+        <a class="navbar-brand text-white" href="{{ url_for('home') }}"><span class="r-name font-weight-bold"> <img src="static/heartlogo.png" height="40px" width="40px"/>Cardio Monitor</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link text-white font-weight-bold" href="{{ url_for('about') }}">About heart_disease</a>
+          </div>
+          </div>
+          </nav>
+          <div class="row">
+            <div class=" col-md-10 offset-md-1 col-xs-12 border p-4 mt-1" id="form-div">
+                <div class="pb-1 pt-1 mb-2 text-center">
+                    <h1 class="pb-1 mb-1 h3 font-weight-bold"> INFORMATION
+                    <p class="text-white pb-1">THIS WILL HELP AND REACHS THE INFORMATION TO THE USER:</p></h1>
+                </div>
+                </div>
+                </div>
+            </nav>
+            <h1>ANGINA</h1>
+            <p>Angina is chest pain or discomfort resulting from reduced blood flow to the heart muscle, often caused by coronary artery disease.</p>
+               <img src="static/angina.jpg" width="50%" height="50%" style="text-align: left ; align-items: start; display: block;">
+               
+               <h1 style="color: black;">SYMPTOMS</h1>
+               <p style="color: black;"><ol style="color: black;"><li>The main symptom of angina is chest pain or discomfort, often described as pressure, squeezing, burning, or tightness.</li>
+               <li>  The pain may radiate to the shoulders, arms, neck, jaw, or back.
+                    Additional symptoms may include shortness of breath, nausea, fatigue, dizziness, and sweating.
+                </li>
+               </p>
+               <h1>ST DEPPRESSION</h1>
+               <p>ST depression is significant if it is 1 mm (0.1 mV) or more below the baseline in horizontal or downsloping patterns, persisting for at least 0.08 seconds. Upsloping ST depression is considered significant if it is 1.5 mm (0.15 mV) or more.</p>
+               <img src="static/stdepp.jpg" width="50%" height="50%" style="text-align: left ; align-items: start; display: block;">
+          <p>HERE IS THE REPORT ANALYSIS <a href="/st.pdf" target="_blank">Open PDF</a></p>
+               <h1>Resting Electrocardiographic Resourcse </h1>
+               <p>A resting electrocardiogram (ECG or EKG) is a non-invasive test that records the electrical activity of the heart while the patient is at rest, used to detect heart abnormalities.</p>
+               <img src="static/OIP.jpeg" width="50%" height="50%" style="text-align: left ; align-items: start; display: block;">
+              
+               <img src="static/B9780323078665000198_f19-03-9780323078665.jpg" width="50%" height="50%" style="text-align: left ; align-items: start; display: block;">
+               <p>HERE IS THE REPORT ON  ECG <a href="/aandp.pdf" target="_blank">Open PDF</a></p>
+</body>
+</html>
